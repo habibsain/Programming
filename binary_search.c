@@ -12,9 +12,52 @@ int search(int* nums,  int numSize, int target){
 	
 	return 2;//Trial
 }
-void sort(int* nums)
+
+void* merge(int* arr, int left, int mid, int right)
+{
+	int i = left;
+	int j = mid + 1;
+	int temp[right +1];
+	int k = 0;
+	while (i <= mid && j <= right)
+	{
+		if (arr[i] < arr[j])
+			temp[k++] = arr[i++];
+		
+		else
+			temp[k++] = arr[j++];
+		
+	}
+
+	while (i <= mid)
+	{
+		temp[k++] = arr[i++];
+	}
+
+	while (j <= right)
+	{
+		temp[k++] = arr[j++];
+	}
+	
+
+}
+
+void mergesort(int* arr, int left,  int right)
+{
+	int mid = left + (right - left)/2;
+	int left_arr[mid];
+	int right_arr[right - mid];
+
+	mergesort(arr, left, mid );
+	mergesort(arr, mid + 1, right);
+	merge(arr, left, mid, right);
+}
+
+void sort(int* nums, int numSize)
 {
 	//Write a merge sort algorithm
+	int elem_num =  sizeof(nums);
+	printf("Number of elements is %d\n", elem_num);
 }
 
 int main(int argc, char** argv)
@@ -51,14 +94,18 @@ int main(int argc, char** argv)
 
 	//Binary Search
 	int index;
-	sort(nums);
+	sort(nums, numSize);
 	index = search(nums, numSize, target);
-	
-	free(nums);
-	nums = NULL;
-	
+		
 	printf("The index of %d is %d\n", target, index);
-	
+	for(int i = 0; i < numSize; i++)
+                {
+                        printf("%d \t", nums[i]);
+                }
+	printf("\n");
+	free(nums);
+        nums = NULL;
+
 
 	return 0;
 }
