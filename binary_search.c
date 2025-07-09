@@ -56,8 +56,9 @@ void mergesort(int* arr, int left,  int right)
 void sort(int* nums, int numSize)
 {
 	//Write a merge sort algorithm
-	int elem_num =  sizeof(nums);
-	printf("Number of elements is %d\n", elem_num);
+	int left = 0;
+	int right = numSize - 1;
+	mergesort(nums, left, right);
 }
 
 int main(int argc, char** argv)
