@@ -6,10 +6,15 @@
 #include <string.h>
 
 int search(int* nums,  int numSize, int target){
-//Write your code here....
-//If found return the index
-//Else return -1
+	//Write your code here....
+	//If found return the index
+	//Else return -1
+	
 	return 2;//Trial
+}
+void sort(int* nums)
+{
+	//Write a merge sort algorithm
 }
 
 int main(int argc, char** argv)
@@ -46,6 +51,7 @@ int main(int argc, char** argv)
 
 	//Binary Search
 	int index;
+	sort(nums);
 	index = search(nums, numSize, target);
 	
 	free(nums);
