@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "include/sort.h"
 
 int search(int* nums,  int numSize, int target){
 	//Write your code here....
@@ -13,59 +14,10 @@ int search(int* nums,  int numSize, int target){
 	return 2;//Trial
 }
 
-void* merge(int* arr, int left, int mid, int right)
-{
-	int i = left;
-	int j = mid + 1;
-	int temp[right +1];
-	int k = 0;
-	while (i <= mid && j <= right)
-	{
-		if (arr[i] < arr[j])
-			temp[k++] = arr[i++];
-		
-		else
-			temp[k++] = arr[j++];
-		
-	}
-
-	while (i <= mid)
-	{
-		temp[k++] = arr[i++];
-	}
-
-	while (j <= right)
-	{
-		temp[k++] = arr[j++];
-	}
-	
-
-}
-
-void mergesort(int* arr, int left,  int right)
-{
-	int mid = left + (right - left)/2;
-	int left_arr[mid];
-	int right_arr[right - mid];
-
-	mergesort(arr, left, mid );
-	mergesort(arr, mid + 1, right);
-	merge(arr, left, mid, right);
-}
-
-void sort(int* nums, int numSize)
-{
-	//Write a merge sort algorithm
-	int left = 0;
-	int right = numSize - 1;
-	mergesort(nums, left, right);
-}
 
 int main(int argc, char** argv)
 {
 	int numSize, *nums;
-
-
 	if (argc >= 2)
 	{
 		numSize = argc - 1;
