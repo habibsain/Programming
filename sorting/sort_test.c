@@ -11,6 +11,13 @@ void print_arr(int* arr, int num)
     printf("\n");
 }
 
+void merge_test()
+{
+    int arr1[] = {1, 3, 4, 7, 2, 5, 6};
+    merge(arr1, 0, 3, 6);
+    assert();
+}
+
 int main()
 {
     int num = 5;

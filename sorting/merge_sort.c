@@ -1,4 +1,4 @@
-//sort.c
+//merge_sort.c
 
 #include "merge_sort.h"
 
