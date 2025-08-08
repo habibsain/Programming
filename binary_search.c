@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "include/sort.h"
+#include "sorting/merge_sort.h"
 
 int search(int* nums,  int numSize, int target){
 	//Write your code here....
