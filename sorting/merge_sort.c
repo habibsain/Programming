@@ -1,6 +1,6 @@
 //sort.c
 
-#include "../include/sort.h"
+#include "../include/merge_sort.h"
 
 static void merge(int* arr, int left, int mid, int right)
 {
