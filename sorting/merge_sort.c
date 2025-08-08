@@ -27,14 +27,19 @@ static void merge(int* arr, int left, int mid, int right)
 	{
 		temp[k++] = arr[j++];
 	}
+
+	for (int i = 0; i <= right; i++)
+	{
+		arr[i] = temp[i];
+	}
 	
 }
 
 static void mergesort(int* arr, int left,  int right)
 {
 	int mid = left + (right - left)/2;
-	int left_arr[mid];
-	int right_arr[right - mid];
+	// int left_arr[mid];
+	// int right_arr[right - mid];
 
 	mergesort(arr, left, mid );
 	mergesort(arr, mid + 1, right);

@@ -1,11 +1,10 @@
-//sort.h
+//merge_sort.h
 
-#ifndef __SORT__
-#define __SORT__
+#ifndef __MERGESORT__
+#define __MERGESORT__
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 // static void merge(int* arr, int left, int mid, int right);
 
