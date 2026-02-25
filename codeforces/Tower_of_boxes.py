@@ -12,11 +12,12 @@ def result():
 
 def test_min(n, m, d):
     #min = 0
-    factor = int(d/m)
-    if factor == 0:
-        min = n
+    factor = int(d/m) + 1
+
+    if n < factor:
+        min = 1
     else:
-        min = int(n/factor) - 1 if n%factor == 0 else int(n/factor) + 1
+        min = int(n/factor) if n%factor == 0 else int(n/factor) + 1
     return min
 
 def test():
