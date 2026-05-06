@@ -5,6 +5,7 @@
 #include <cassert>
 #include <stdbool.h>
 #include <string>
+#include <iostream>
 using namespace std;
 
 
@@ -70,5 +71,8 @@ int main()
     // test_all_ones();
     // test_one_spare();
     testhello();
+    HyperLogLog myobj(5);
+    cout << myobj.GetInitialBits() <<"\n";
+
     return 0;
 }

@@ -1,11 +1,11 @@
 #! /bin/bash
 
-gxx=g++
+gxx="g++"
 gxxflag="-I . -Wall"
 #src=../src/mem.c
-src=hyperloglog.cpp
+src="hyperloglog.cpp"
 target=$1
-out=${target/.c/.x}
+out=${target/.cpp/.x}
 
 if [[ $# -eq 0 ]]; then
     echo "usage: ./compille file.c"
@@ -18,10 +18,10 @@ fi
 #simple compiler script to ease the process
 if [[ $target =~ \.cpp$ && $# -eq 1 ]]; then
     
-    gxx $gxxflag $src $target -o $out
+    $gxx $gxxflag $src $target -o $out
 
 elif [[ $target =~ \.cpp$ && $2 -eq 1 ]]; then
-    gxx  $target -o $out
+    $gxx  $target -o $out
 
 elif [[ $target == clean ]]; then
     rm *.x

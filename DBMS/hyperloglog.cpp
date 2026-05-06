@@ -6,3 +6,10 @@ std::string helloworld()
 {
     return "Hello World\n";
 }
+
+HyperLogLog::HyperLogLog(int val) : b(val) {}// inititialising initial bits
+
+int HyperLogLog::GetInitialBits()
+{
+    return b;
+}
