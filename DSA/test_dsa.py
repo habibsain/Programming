@@ -9,13 +9,17 @@ def hello(x: str):
 def test_hello():
     assert hello("HELLo") == True
 
-num_list = [2, 4, 8, 1, 9, 10, 1.3, 3]
+numList1 = [2, 4, 8, 1, 9, 10, 1.3, 3]
+numList2 = [2, 4, 8, 1, 9, 10, 1.3, 5]
+
+#[2, 1, 1.3, 3, 4, 8, 9, 10]
 
 def test_partition():
-    pass
+    assert algorithms.partition(num_list=numList1) == 3
+    assert algorithms.partition(num_list=numList2) == 4
 
 def test_quicksort():
-    pass
+    assert algorithms.quicksort(numList1) == [1, 1.3, 2, 3, 4, 8, 9, 10]
     
 
 

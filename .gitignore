@@ -2,3 +2,5 @@
 abstractions/install.sh
 bin/opam
 DBMS/myprog
+DSA/__pycache__/
+DSA/src/__pycache__/
