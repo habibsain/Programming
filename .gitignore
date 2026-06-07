@@ -4,3 +4,5 @@ bin/opam
 DBMS/myprog
 DSA/__pycache__/
 DSA/src/__pycache__/
+DSA/__pycache__/test_dsa.cpython-312-pytest-9.0.3.pyc
+*.pyc
