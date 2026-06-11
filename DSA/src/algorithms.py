@@ -20,6 +20,8 @@ def partition(num_list: list[int | float], low: int, high: int):
     num_list[i + 1], num_list[r] = num_list[r], num_list[i+1]
     return i + 1
 
+#def make
+
 # class Sort():
 #     def __init__(self, num_list: list[int | float]):
 #         self.num_list = num_list

@@ -14,6 +14,7 @@
 #AVL tree
 #B-tree
 #Hash table
+#Disjoint Set Union
 ##with-> separate chaining, linear probing, quadratic probing, double hashing
 
 class MaxHeap:
@@ -110,6 +111,10 @@ class MinHeap:
 
         return root
 
+
+# class dsu:
+#     def __init__(self):
+        
 
 
 if __name__ == "__main__":
